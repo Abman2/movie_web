@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import React, {useEffect, useState } from "react";
+import { Routes,Route} from "react-router-dom";
+import Card from "./component/Card";
+import Header from "./component/Header";
+import InnerPageContent from "./component/InnerPageContent";
+import Inner from "./component/Inner"
 function App() {
+  
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      
+<Inner />
+   
+    
+      {/* <Routes>
+      <Route path="/" element = {<div><Header/><Card/></div>} />
+      <Route exact path="/:id route" element={<InnerPageContent/>}/> 
+      </Routes> */}
+     
+  
+      
+    </>
+    
   );
 }
 
