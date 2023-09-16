@@ -1,4 +1,5 @@
 {
+  "homepage": "http/abman2.github.io.movie_web-zuri_lesson_2",
   "name": "happy_01",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +15,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy":"npm run build",
+    "deploy": "gh_pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
