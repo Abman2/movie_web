@@ -16,7 +16,7 @@ function InnerPageNav() {
       <span className="mr-2 w-5">
         <img src={linksLogo[index]} alt={link} />
       </span>
-      <a className="font-semibold " key={link} href={linksHref[index]} onClick={()=>navigate("/")}>
+      <a className="font-semibold " key={link} href={linksHref[index]} onClick={()=>navigate("/movie_web-zuri_lesson_2")}>
         {link}
       </a>
     </div>
@@ -40,7 +40,7 @@ function InnerPageNav() {
       </div>
       <div className="inline-flex items-center my-4 mb-20 hover:border-e-2 hover:bg-red-300 hover:border-red-700 hover:px-10 hover:py-2">
         <img src={logout} className="mr-2  w-6" alt='logout'/>
-        <a href="#">Log Out</a>
+        <li >Log Out</li>
       </div>
     </div>
   );

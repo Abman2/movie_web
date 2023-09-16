@@ -18,9 +18,9 @@ function Footer() {
       </div>
     
       <ul className="flex space-x-5 font-semibold ">
-        <li ><a href="">Condition of use</a></li>
-        <li><a href="">Privacy & Policy</a></li>
-        <li><a href="">Press Room</a></li>
+        <li >Condition of use</li>
+        <li>Privacy & Policy</li>
+        <li>Press Room</li>
       </ul>
       <p className="text-sm text-slate-400 ">2021 moviebox by Abdulrahman</p>
     </footer>

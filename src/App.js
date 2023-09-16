@@ -15,7 +15,7 @@ function App() {
     
      <Routes>
         <Route
-          path="/"
+          path="/movie_web-zuri_lesson_2"
           element={
             <>
             {!loading? <Loading /> : null}

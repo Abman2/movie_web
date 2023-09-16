@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Inner from "../component/Inner";
+import Inner from "./Inner";
 import InnerPageNav from "./InnerPageNav";
 import smallImage from "../images/Rectangle 37.png";
 import Loading from "./Loading";
@@ -12,9 +12,9 @@ function InnerPageContent() {
   // console.log(id)
   const { loading, movie } = Inner(id);
  
-  const randomNumber = Math.floor(Math.random() * 6) + 1;
   const selectedImage = movie.videos;
   const video = selectedImage?.results[0];
+ 
   // genres
   // const genres = movie.genres;
   //   const abman = genres.map((genre,index) => {
