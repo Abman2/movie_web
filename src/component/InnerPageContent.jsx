@@ -14,7 +14,7 @@ function InnerPageContent() {
  
   const selectedImage = movie.videos;
   const video = selectedImage?.results[0];
-  console.log(video?.key)
+
  
   // genres
   // const genres = movie.genres;
