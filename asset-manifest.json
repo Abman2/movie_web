@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/movie_web-zuri_lesson_2/static/css/main.ae6c9d90.css",
-    "main.js": "/movie_web-zuri_lesson_2/static/js/main.9b45f8bf.js",
+    "main.css": "/movie_web-zuri_lesson_2/static/css/main.f5a209db.css",
+    "main.js": "/movie_web-zuri_lesson_2/static/js/main.4e79d64f.js",
     "static/js/787.4ff13f2c.chunk.js": "/movie_web-zuri_lesson_2/static/js/787.4ff13f2c.chunk.js",
     "static/media/Rectangle 37.png": "/movie_web-zuri_lesson_2/static/media/Rectangle 37.ca550f0f60be8fe87421.png",
     "static/media/OFL.txt": "/movie_web-zuri_lesson_2/static/media/OFL.2236d356169b519dca54.txt",
     "index.html": "/movie_web-zuri_lesson_2/index.html",
-    "main.ae6c9d90.css.map": "/movie_web-zuri_lesson_2/static/css/main.ae6c9d90.css.map",
-    "main.9b45f8bf.js.map": "/movie_web-zuri_lesson_2/static/js/main.9b45f8bf.js.map",
+    "main.f5a209db.css.map": "/movie_web-zuri_lesson_2/static/css/main.f5a209db.css.map",
+    "main.4e79d64f.js.map": "/movie_web-zuri_lesson_2/static/js/main.4e79d64f.js.map",
     "787.4ff13f2c.chunk.js.map": "/movie_web-zuri_lesson_2/static/js/787.4ff13f2c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae6c9d90.css",
-    "static/js/main.9b45f8bf.js"
+    "static/css/main.f5a209db.css",
+    "static/js/main.4e79d64f.js"
   ]
 }
