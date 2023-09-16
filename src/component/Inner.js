@@ -1,37 +1,25 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
+import {options} from "./FetchOptions"
 
-export default function Inner() {
-    const [movieList, setMovieList] = useState([]);
-    const logMovies2 = () => {
-       
+const useFetchMovie = (id) => {
+  const [loading, setLoading] = useState(false);
+  const [movie, setMovie] = useState([]);
+  useEffect(() => {
+    setLoading(true);
+    fetchMovies();
+  }, []);
 
-        fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=91ae0fa37680b226d14ee02bf53a7ff2")
-          .then((response) => response.json())
-          .then((json) => setMovieList(json.results))
-          .catch((err) => alert("unable to fetch data"));
-      };
-      useEffect(() => logMovies2(), []);
-   
+  const fetchMovies = async () => {
+    const url = `https://api.themoviedb.org/3/movie/${id}?append_to_response=videos,images,genres`;
+    const res = await fetch(url, options);
+    const data = await res.json();
+    setMovie(data);
+    setLoading(false);
+    // console.log(data);
+  };
 
-      const logMovies4 =(mov) =>{
-       if(mov){
-        fetch(`https://api.themoviedb.org/3/movie/${mov}?api_key=91ae0fa37680b226d14ee02bf53a7ff2`)
-        .then((respons) => respons.json())
-        .then((json) => console.log(json))
-        .catch((err) => alert("unable to fetch data"));}
-    
-      }
-      
-     movieList.map((movi,index) => {  
-        logMovies4(movi.id)})
-    
-   
-  return (
-   <>
-   {
-   
+  return { movie, loading };
+  // console.log(movie)
+};
 
-    }
-   </>
-  )
-}
+export default useFetchMovie;

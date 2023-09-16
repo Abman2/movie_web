@@ -2,12 +2,13 @@
 import React, { useEffect, useState } from "react";
 import logo from "../images/Logo.png";
 import menu from "../images/Menu.png";
-import background from "../images/Poster.png";
 import searchIcon from "../images/Searchicon.png";
 import tomato from "../images/tomato.png";
 import imdb from "../images/imdb.png";
 
-function Header({backgroud,title,overview,vote_average}) {
+
+
+function Header({background,title,overview,vote_average}) {
   const [movieList, setMovieList] = useState([]);
   const logMovies = () => {
     fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=91ae0fa37680b226d14ee02bf53a7ff2")
@@ -16,15 +17,11 @@ function Header({backgroud,title,overview,vote_average}) {
       .catch((err) => alert("unable to fetch data"));
   };
   useEffect(() => logMovies(), []);
- background = movieList.map((arr,index) => ([arr.backdrop_path]))
+ background = movieList.map((arr,index) => ([ arr.backdrop_path]))
+ 
   title =movieList.map((arr,index) => ([arr.title]))
  overview = movieList.map((arr,index) => ([arr.overview]))
  vote_average = movieList.map((arr,index) => ([arr.vote_average]))
-
-
-
-  
-  
   return (
     <header
       className="container mx-auto bg-black  h-screen " 
@@ -33,6 +30,7 @@ function Header({backgroud,title,overview,vote_average}) {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        
       }}>
       <nav className="sm:max-w-6xl  mx-auto sticky top-0 z-50 flex p-2 justify-between">
         <h1 className="">

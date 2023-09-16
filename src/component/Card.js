@@ -3,28 +3,29 @@ import {useNavigate} from "react-router-dom"
 import tomato from "../images/tomato.png";
 import imdb from "../images/imdb.png";
 import InnerPageContent from "./InnerPageContent";
+import Loading from "./Loading";
+import Fetchmovies from "./Fetchmovies";
+
 
 function Card() {
-  const [movieList, setMovieList] = useState([]);
-  const logMovies = () => {
-    fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=91ae0fa37680b226d14ee02bf53a7ff2")
-      .then((response) => response.json())
-      .then((json) => setMovieList(json.results))
-      .catch((err) => alert("unable to fetch data"));
-  };
-  useEffect(() => logMovies(), []);
+const {loading, movies} = Fetchmovies()
+
+ //console.log(movies)
 
 const navigate = useNavigate()
   return (
-    <section className="sm:max-w-6xl mx-auto mt-10 ">
+   <>
+   {loading? <Loading/> : null}
+   {!loading ? (
+    <section className="sm:max-w-6xl max-w-sm mx-auto mt-10 ">
       <h1 className="text-4xl font-bold text-left mb-6">Top Rated Movies</h1>
-      <div className=" grid grid-cols-2 md:grid-cols-4 text-left gap-x-10 ">
-      {movieList.map((movie, index) => ( console.log("hello mr omoleye",movie),
+      <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-left gap-x-5 sm:gap-x-10">
+      {movies.map((movie, index) => ( 
         index < 10 ? (
-          <div data-testid="movie-card" className= "flex flex-col rounded-md" >
+          <div data-testid="movie-card" key={movie[index]} className= "flex flex-col rounded-md" >
             <div className="h-3/5">
               <img
-              onClick={()=>navigate("/:id/route")}
+              onClick={()=>navigate(`/${movie.id}/route`)}
                 className="w-full h-full rounded-md"
                 loading="lazy-loading"
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -58,7 +59,8 @@ const navigate = useNavigate()
         
      ) )}
       </div>
-    </section>
+    </section>):null}
+   </>
   );
 }
 
