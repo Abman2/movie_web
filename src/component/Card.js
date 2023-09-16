@@ -17,7 +17,7 @@ const navigate = useNavigate()
    <>
    {loading? <Loading/> : null}
    {!loading ? (
-    <section className="sm:max-w-6xl max-w-sm mx-auto mt-10 ">
+    <section className="sm:container max-w-sm  mx-auto mt-10 ">
       <h1 className="text-4xl font-bold text-left mb-6">Top Rated Movies</h1>
       <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-left gap-x-5 sm:gap-x-10">
       {movies.map((movie, index) => ( 

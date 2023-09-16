@@ -24,7 +24,7 @@ function Header({background,title,overview,vote_average}) {
  vote_average = movieList.map((arr,index) => ([arr.vote_average]))
   return (
     <header
-      className="container mx-auto bg-black  h-screen " 
+      className=" mx-auto bg-black  sm:h-fit xl:h-screen h-screen " 
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w500${background[0]})`,
         backgroundSize: "cover",
