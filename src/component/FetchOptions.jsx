@@ -1,8 +1,8 @@
 export const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOGI0ZGZmNzUxNGVmNGQ0OGNjMDMwMzA5NDBlYzI0NiIsInN1YiI6IjYwY2MzYWNjYWFlYzcxMDAyOTZiMzhhYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.26Lkuzd2upChHV0yjiS5z1O7wEvQLKd27zkJQbcac1w",
-  },
-};
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MWFlMGZhMzc2ODBiMjI2ZDE0ZWUwMmJmNTNhN2ZmMiIsInN1YiI6IjY1MDIxYmNlZmZjOWRlMGVlMDBlMGUyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Q4BCn5hhuCydoG5keOjgTPO1HhX0LDTMFQy1pGKgzJw",
+    },
+  };

@@ -54,7 +54,7 @@ const navigate = useNavigate()
             </div>
           </div>
         ) : (
-          <div className="hidden"></div>
+          <div className="hidden" key={movie[index]}></div>
         )
         
      ) )}

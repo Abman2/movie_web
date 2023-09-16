@@ -7,7 +7,7 @@ const useFetchMovie = (id) => {
   useEffect(() => {
     setLoading(true);
     fetchMovies();
-  }, [movie]);
+  }, []);
 
   const fetchMovies = async () => {
     const url = `https://api.themoviedb.org/3/movie/${id}?append_to_response=videos,images,genres`;

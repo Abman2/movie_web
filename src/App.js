@@ -7,6 +7,7 @@ import InnerPageContent from "./component/InnerPageContent";
 import Loading from "./component/Loading";
 import Footer from "./component/Footer";
 
+
 function App() {
   const [loading,setLoading] = useState(false)
   useEffect(()=>setLoading(true),[])

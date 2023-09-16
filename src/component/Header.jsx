@@ -32,7 +32,7 @@ function Header({background,title,overview,vote_average}) {
         backgroundRepeat: "no-repeat",
         
       }}>
-      <nav className=" fixed  mx-auto bg-slate-700 w-full  top-0 z-50 flex p-2 justify-between">
+      <nav className=" fixed  mx-auto bg-slate-700 xl:bg-transparent w-full  top-0 z-50 flex p-2 justify-between">
         <h1 className="">
           <img src={logo} alt="logo" className="sm:w-36 w-24  sm:h-10 h-7 inline mr-2" />
         </h1>
@@ -49,7 +49,7 @@ function Header({background,title,overview,vote_average}) {
           <img src={menu} alt="menu" className="h-7 w-7 ms-5 " />
         </div>
       </nav>
-      <section className="flex sm:max-w-6xl max-w-md  mx-auto item-center justify-between pt-40 text-white ">
+      <section className="flex sm:max-w-6xl max-w-md  mx-auto item-center justify-between pt-56 text-white ">
         <article className="sm:w-1/2 mx-auto ps-10 ">
           <h1 className="text-6xl  font-extrabold text-left">{title[0]}</h1>
           <div className="flex  items-center px-2 space-x-9 mt-2 ">
