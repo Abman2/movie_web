@@ -42,6 +42,7 @@ function InnerPageContent() {
             marginwidth="0px"
             height="400px"
             width="100%"
+            title={video}
             allowfullscreen></iframe>
         </div>
         {/* word part */}

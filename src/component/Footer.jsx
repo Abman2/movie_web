@@ -8,7 +8,7 @@ function Footer() {
   const images = [facebook, instagram, twiter, youtube];
     const getImage = images.map((image,index) => (
         
-        <img src={image} alt="a" />
+        <img src={image} alt="" key={image[index]} />
         
       ))
   return (

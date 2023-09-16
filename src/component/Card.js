@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {useNavigate} from "react-router-dom"
 import tomato from "../images/tomato.png";
 import imdb from "../images/imdb.png";
-import InnerPageContent from "./InnerPageContent";
 import Loading from "./Loading";
 import Fetchmovies from "./Fetchmovies";
 
@@ -17,7 +16,7 @@ const navigate = useNavigate()
    <>
    {loading? <Loading/> : null}
    {!loading ? (
-    <section className="sm:container max-w-sm  mx-auto mt-10 ">
+    <section className="sm:container xl:max-w-6xl max-w-sm  mx-auto mt-10 ">
       <h1 className="text-4xl font-bold text-left mb-6">Top Rated Movies</h1>
       <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-left gap-x-5 sm:gap-x-10">
       {movies.map((movie, index) => ( 
@@ -29,6 +28,7 @@ const navigate = useNavigate()
                 className="w-full h-full rounded-md"
                 loading="lazy-loading"
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt="poster_path"
                 data-testid="movie-poster"
               />
               <div className="space-y-3 rounded-sm bg-slate-50  h-1/2">
@@ -42,11 +42,11 @@ const navigate = useNavigate()
                
                 <div className="flex justify-between items-center px-2 ">
                   <div>
-                    <img src={imdb} className="inline mr-2 font-semibold" />
+                    <img src={imdb} className="inline mr-2 font-semibold" alt="imdb" />
                     <span className="text-sm">{movie.vote_average*10}.0/100</span>
                   </div>
                   <div className="">
-                    <img src={tomato} className="inline mr-2 font-semibold " />
+                    <img src={tomato} className="inline mr-2 font-semibold "  alt="tomato"/>
                     <span className="text-sm">{movie.vote_average * 10}%</span>
                   </div>
                 </div>

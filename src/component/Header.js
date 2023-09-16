@@ -32,7 +32,7 @@ function Header({background,title,overview,vote_average}) {
         backgroundRepeat: "no-repeat",
         
       }}>
-      <nav className="sm:max-w-6xl fixed  mx-auto bg-slate-700 w-full  top-0 z-50 flex p-2 justify-between">
+      <nav className=" fixed  mx-auto bg-slate-700 w-full  top-0 z-50 flex p-2 justify-between">
         <h1 className="">
           <img src={logo} alt="logo" className="sm:w-36 w-24  sm:h-10 h-7 inline mr-2" />
         </h1>
@@ -45,7 +45,7 @@ function Header({background,title,overview,vote_average}) {
           <img src={searchIcon} alt="search icon" className="absolute right-2.5" />
         </div>
         <div className="flex items-center justify-end ">
-          <a className="text-white hidden sm:inline">Sign In</a>
+          <a href="./" className="text-white hidden sm:inline">Sign In</a>
           <img src={menu} alt="menu" className="h-7 w-7 ms-5 " />
         </div>
       </nav>
@@ -54,11 +54,11 @@ function Header({background,title,overview,vote_average}) {
           <h1 className="text-6xl  font-extrabold text-left">{title[0]}</h1>
           <div className="flex  items-center px-2 space-x-9 mt-2 ">
                   <div>
-                    <img src={imdb} className="inline mr-2 font-semibold" />
+                    <img src={imdb} className="inline mr-2 font-semibold" alt="imdb" />
                     <span className="text-sm">{vote_average[0]*10}.0/100</span>
                   </div>
                   <div className="">
-                    <img src={tomato} className="inline mr-2 font-semibold " />
+                    <img src={tomato} className="inline mr-2 font-semibold " alt="tomato"/>
                     <span className="text-sm">{vote_average[0] * 10}%</span>
                   </div>
                 </div>
